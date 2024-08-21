@@ -18,6 +18,7 @@ const RoutesApp = () => {
         <Route path="notfound" element={<NotFound />} />
         <Route path="/*" element={<Navigate to="notfound" />} />
         <Route path="orders" element={<OrderProduc />} />
+        <Route path="my-orders/last" element={<OrderProduc />} />
         <Route path="signin" element={<SignIn />} />
       </Routes>
     </>

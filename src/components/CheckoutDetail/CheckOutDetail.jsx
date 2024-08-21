@@ -4,6 +4,7 @@ import { XMarkIcon } from "@heroicons/react/24/solid";
 import { ShoppingCardContext } from "../../context/ShoppingCardProvider";
 import OrderCart from "../OrderCart/OrderCart";
 import { totalPrice } from "../utils";
+import { Link } from "react-router-dom";
 
 const CheckOutDetail = () => {
   const context = useContext(ShoppingCardContext);
@@ -58,12 +59,14 @@ const CheckOutDetail = () => {
             <span className="font-medium text-2xl">Total:</span>
             <span>${totalPrice(context.cartProducts)}</span>
           </p>
-          <button
-            className="w-full rounded-md bg-black py-4 text-white "
-            onClick={handleCheckout}
-          >
-            Checkout
-          </button>
+          <Link to="my-orders/last">
+            <button
+              className="w-full rounded-md bg-black py-4 text-white "
+              onClick={handleCheckout}
+            >
+              Checkout
+            </button>
+          </Link>
         </div>
       </aside>
     </>

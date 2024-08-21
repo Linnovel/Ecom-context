@@ -19,10 +19,9 @@ const OrderCart = ({ productsData, handleDeleted }) => {
         </div>
         <div className="flex items-center gap-2">
           <p className="font-bold text-sm ">Price: {price}</p>
-          <XMarkIcon
-            onClick={() => handleDeleted(id)}
-            className="size-6 text-black cursor-pointer"
-          />
+          {handleDeleted && (
+            <XMarkIcon className="size-6 text-black cursor-pointer" />
+          )}
         </div>
       </div>
     </>
