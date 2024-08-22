@@ -2,7 +2,7 @@ import React from "react";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 
 const OrderCart = ({ productsData, handleDeleted }) => {
-  const { id, title, images, price } = productsData;
+  const { title, images, price } = productsData;
 
   return (
     <>
